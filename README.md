@@ -35,3 +35,4 @@ Back up and retore use dump.rdb
 # Ref:
     https://www.npmjs.com/package/redis
     https://redis.io/docs/clients/nodejs/
+    Install Cluster -> https://redis.io/docs/latest/develop/connect/clients/nodejs/
