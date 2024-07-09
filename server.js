@@ -40,7 +40,7 @@ app.get("/testHashes", async (req, res)=>{
     const key = "testHashes";
     let user = await client.hGetAll(key);
     console.log(Object.keys(user));
-   if(Object.keys(user).length==0){
+    if(Object.keys(user).length==0){
         await client.hSet(key,{
             "id": 1,
             "user": "Hoang Tien Hoa"
@@ -54,12 +54,12 @@ app.get("/testHashes", async (req, res)=>{
 
 //Delete All Redis Data
 app.delete("/deleteAllRedisData", async (req, res)=>{
-   let keys = await client.keys('*');
-   console.log(keys);
-   keys.map( async key => {
-       await client.del(key);
-   });
-   return res.send('Deleted All Redis Data');
+    let keys = await client.keys('*');
+    console.log(keys);
+    keys.map( async key => {
+        await client.del(key);
+    });
+    return res.send('Deleted All Redis Data');
 })
 app.delete("/delete",async (req, res)=>{
     const key = req.query.key;

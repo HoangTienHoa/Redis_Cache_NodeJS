@@ -27,11 +27,15 @@ Back up and retore use dump.rdb
     redis-cli
     redis 127.0.0.1:6379 > ping
         -> Expect: Pong
+# Shutdown redis
+    brew services stop redis
+# Restart redis
+    brew services restart redis
 # Run app
     npm i
     npm start
     using postman for testing API.
-
+    http://localhost:3000/testString
 # Ref:
     https://www.npmjs.com/package/redis
     https://redis.io/docs/clients/nodejs/
